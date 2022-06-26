@@ -106,9 +106,8 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('home')
-        
+
 def mypage(request):
     posts = Post.objects.all()
     return render(request, 'mypage.html', { "posts":posts  })
-    
-    
+
